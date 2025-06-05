@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cobblemon_utility_plus_modified:item/silver_caps/hp"
+  },
+  "overrides": [
+    {
+      "predicate": { "cap_stat": 1 },
+      "model": "cobblemon_utility_plus_modified:item/silver_caps/atk" },
+    {
+      "predicate": { "cap_stat": 2 },
+      "model": "cobblemon_utility_plus_modified:item/silver_caps/def" },
+    {
+      "predicate": { "cap_stat": 3 },
+      "model": "cobblemon_utility_plus_modified:item/silver_caps/spa" },
+    {
+      "predicate": { "cap_stat": 4 },
+      "model": "cobblemon_utility_plus_modified:item/silver_caps/spd" },
+    {
+      "predicate": { "cap_stat": 5 },
+      "model": "cobblemon_utility_plus_modified:item/silver_caps/spe" }
+  ]
+}
