@@ -6,15 +6,22 @@ import com.cobblemon.mod.common.pokemon.Pokemon
 import com.xxxt.cupm.Config
 import com.xxxt.cupm.utils.allIVMax
 import com.xxxt.cupm.utils.setAllVMax
+import net.minecraft.ChatFormatting
+import net.minecraft.core.component.DataComponents
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.InteractionResultHolder
-import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Rarity
-import net.minecraft.world.level.Level
 
-class GoldenCapItem() : CapImpl(itemRarity = Rarity.EPIC) {
+class GoldenCapItem() : CapImpl(
+    properties = Properties().apply {
+        rarity(Rarity.EPIC)
+        this.component(DataComponents.CUSTOM_NAME,
+                    Component.translatable("${basicPath}golden_cap")
+                        .withStyle(ChatFormatting.GOLD))
+    }
+) {
 
     override val name: String = "golden_cap"
 

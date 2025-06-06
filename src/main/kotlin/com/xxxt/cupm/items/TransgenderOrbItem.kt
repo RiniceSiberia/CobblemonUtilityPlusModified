@@ -10,9 +10,9 @@ import net.minecraft.world.InteractionResultHolder
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Rarity
 
-class TransgenderOrbItem() : CUPMSelectingItemImpl(itemRarity = Rarity.UNCOMMON) {
+class TransgenderOrbItem() : CUPMSelectingItemImpl(itemRarity = Rarity.RARE) {
 
-    override val name: String = "transgender_orb"
+    override val name: String = "transgender_orb.json"
 
     override fun applyToPokemon(
         player: ServerPlayer,

@@ -14,9 +14,7 @@ import net.minecraft.world.InteractionResultHolder
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Rarity
 
-class SilverCapItem(): ShiftCapImpl(Rarity.RARE)  {
-
-    override val name: String = "silver_cap"
+class SilverCapItem(): ShiftCapImpl(itemRarity = Rarity.EPIC, name = "silver_cap")  {
 
     override fun applyToPokemon(
         player: ServerPlayer,

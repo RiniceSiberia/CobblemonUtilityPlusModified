@@ -13,9 +13,8 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Rarity
 import kotlin.random.Random
 
-class CopperCapItem() : ShiftCapImpl(Rarity.UNCOMMON) {
+class CopperCapItem() : ShiftCapImpl(itemRarity = Rarity.RARE, name = "copper_cap") {
 
-    override val name: String = "copper_cap"
 
     override fun applyToPokemon(
         player: ServerPlayer,

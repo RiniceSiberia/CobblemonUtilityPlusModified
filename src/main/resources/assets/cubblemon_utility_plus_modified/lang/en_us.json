@@ -1,5 +1,77 @@
 {
-  "itemGroup.examplemod": "Example Mod Tab",
-  "block.examplemod.example_block": "Example Block",
-  "item.examplemod.example_item": "Example Item"
+  "creative_tab.cobblemon_utility_plus_modified.utility_items": "Cobblemon Utility Items",
+
+  "item.cobblemon_utility_plus_modified.msg.expire": "This item expired at %1$s",
+  "item.cobblemon_utility_plus_modified.msg.binding_deviation": "This item is bound to %1$s. You cannot use it",
+  "item.cobblemon_utility_plus_modified.tooltip.binding": "This item is locked by %1$s and cannot be used",
+
+  "item.cobblemon_utility_plus_modified.tooltip.expire": "Will expire after %1$s, remaining time: %2$s",
+
+  "unit.time.week": "%1$s week(s)",
+  "unit.time.day": "%1$s day(s)",
+  "unit.time.hour": "%1$s hour(s)",
+  "unit.time.second": "%1$s second(s)",
+  "unit.time.minute": "%1$s minute(s)",
+
+  "item.cobblemon_utility_plus_modified.void_feather": "Void Feather",
+  "item.cobblemon_utility_plus_modified.void_feather.tooltip": "Clears the Pokémon's EVs",
+  "item.cobblemon_utility_plus_modified.void_feather.toolti.msg.has_evs_zero": "The Pokémon has no EVs to clear",
+
+  "item.cobblemon_utility_plus_modified.devolution_relic": "Devolution Relic",
+  "item.cobblemon_utility_plus_modified.devolution_relic.tooltip": "Devolves the Pokémon to its previous form",
+  "item.cobblemon_utility_plus_modified.devolution_relic.msg.success": "Successfully devolved your %1$s into %2$s",
+  "item.cobblemon_utility_plus_modified.devolution_relic.msg.fail": "Your %1$s cannot devolve",
+
+  "item.cobblemon_utility_plus_modified.shiny_lottery": "Shiny Lottery",
+  "item.cobblemon_utility_plus_modified.shiny_lottery.tooltip": "1 in %1$s chance to make the Pokémon shiny; for legendaries: 1 in %2$s",
+  "item.cobblemon_utility_plus_modified.shiny_lottery.msg.basic_denominator_nan_err": "Server misconfiguration: shiny chance is NaN",
+  "item.cobblemon_utility_plus_modified.shiny_lottery.msg.legendary_multiply_nan_err": "Server misconfiguration: legendary shiny chance is NaN",
+  "item.cobblemon_utility_plus_modified.shiny_lottery.msg.result_denominator_nan_err": "Server misconfiguration: total lottery count is NaN",
+  "item.cobblemon_utility_plus_modified.shiny_lottery.msg.success": "Player %1$s successfully made their %2$s shiny using a Shiny Lottery!",
+  "item.cobblemon_utility_plus_modified.shiny_lottery.msg.fail": "You failed to get a shiny Pokémon...",
+  "item.cobblemon_utility_plus_modified.shiny_lottery.msg.has_shiny": "This Pokémon is already shiny and cannot use the Shiny Lottery",
+
+  "item.cobblemon_utility_plus_modified.shiny_card": "Shiny Card",
+  "item.cobblemon_utility_plus_modified.shiny_card.msg.has_shiny": "This Pokémon is already shiny and cannot use the Shiny Card",
+
+  "item.cobblemon_utility_plus_modified.copper_cap": "Copper Crown",
+  "item.cobblemon_utility_plus_modified.copper_cap.tooltip": "Randomizes one of the Pokémon's IVs. Sneak-right-click to switch category",
+  "item.cobblemon_utility_plus_modified.copper_cap.msg.ditto_prohibit": "Cannot use Copper Crown on Ditto",
+
+  "item.cobblemon_utility_plus_modified.golden_cap": "Golden Crown",
+  "item.cobblemon_utility_plus_modified.golden_cap.tooltip": "Maximizes all IVs of the Pokémon",
+  "item.cobblemon_utility_plus_modified.golden_cap.msg.has_iv_max": "All IVs of %1$s are already maxed out; cannot use Golden Crown",
+  "item.cobblemon_utility_plus_modified.golden_cap.msg.ditto_prohibit": "Cannot use Golden Crown on Ditto",
+
+  "item.cobblemon_utility_plus_modified.iron_cap": "Iron Crown",
+  "item.cobblemon_utility_plus_modified.iron_cap.tooltip": "Increases %1$s IV of the Pokémon by 1. Sneak-right-click to switch category",
+  "item.cobblemon_utility_plus_modified.iron_cap.msg.has_iv_max": "%1$s's %2$s is already maxed; cannot use Iron Crown",
+  "item.cobblemon_utility_plus_modified.iron_cap.msg.ditto_prohibit": "Cannot use Iron Crown on Ditto",
+
+  "item.cobblemon_utility_plus_modified.obsidian_cap": "Obsidian Crown",
+  "item.cobblemon_utility_plus_modified.obsidian_cap.tooltip": "Resets %1$s IV of the Pokémon to 0. Sneak-right-click to switch category",
+  "item.cobblemon_utility_plus_modified.obsidian_cap.msg.has_iv_min": "%1$s's %2$s is already 0; cannot use Obsidian Crown",
+
+  "item.cobblemon_utility_plus_modified.silver_cap": "Silver Crown",
+  "item.cobblemon_utility_plus_modified.silver_cap.tooltip": "Maximizes %1$s IV of the Pokémon. Sneak-right-click to switch category",
+  "item.cobblemon_utility_plus_modified.silver_cap.msg.has_iv_max": "%1$s's %2$s is already maxed; cannot use Silver Crown",
+  "item.cobblemon_utility_plus_modified.silver_cap.msg.ditto_prohibit": "Cannot use Silver Crown on Ditto",
+
+  "item.cobblemon_utility_plus_modified.void_cap": "Void Crown",
+  "item.cobblemon_utility_plus_modified.void_cap.tooltip": "Resets all IVs of the Pokémon to 0",
+  "item.cobblemon_utility_plus_modified.void_cap.msg.has_iv_min": "All IVs of %1$s are already 0; cannot use Void Crown",
+
+  "item.cobblemon_utility_plus_modified.msg.ditto_prohibit": "This item cannot be used on Ditto",
+
+  "item.cobblemon_utility_plus_modified.ball_synchronizer": "Poké Ball Synchronizer",
+  "item.cobblemon_utility_plus_modified.ball_synchronizer.msg.from_cherish_prohibit": "Due to server settings, Cherish Balls cannot be synced to other Poké Balls",
+  "item.cobblemon_utility_plus_modified.ball_synchronizer.msg.to_cherish_prohibit": "Due to server settings, this Poké Ball cannot be synced into a Cherish Ball",
+  "item.cobblemon_utility_plus_modified.ball_synchronizer.msg.need_ball": "The Pokémon must be holding a Poké Ball to synchronize",
+  "item.cobblemon_utility_plus_modified.ball_synchronizer.tooltip": "Synchronizes the caught ball to the one currently held by the Pokémon. No cost or return",
+
+  "item.cobblemon_utility_plus_modified.transgender_orb": "Gender Orb",
+  "item.cobblemon_utility_plus_modified.transgender_orb.msg.can_not_change_gender": "This Pokémon is genderless or cannot change gender",
+
+  "item.cobblemon_utility_plus_modified.size_changer": "Size Candy",
+  "item.cobblemon_utility_plus_modified.size_changer.tooltip": "Changes the Pokémon's size to %1$s. Sneak-right-click to switch category"
 }

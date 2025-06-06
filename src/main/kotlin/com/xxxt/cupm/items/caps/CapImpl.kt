@@ -2,14 +2,20 @@ package com.xxxt.cupm.items.caps
 
 import com.cobblemon.mod.common.item.battle.BagItem
 import com.cobblemon.mod.common.pokemon.Pokemon
+import com.xxxt.cupm.items.CUPMItemImpl
 import com.xxxt.cupm.items.CUPMSelectingItemImpl
 import com.xxxt.cupm.utils.dittoUseCapCheck
 import net.minecraft.world.item.Rarity
 
 abstract class CapImpl(
-    itemRarity: Rarity,
     properties : Properties = Properties()
-) : CUPMSelectingItemImpl(itemRarity,properties) {
+) : CUPMSelectingItemImpl(properties) {
+
+    constructor(itemRarity: Rarity) : this(
+        Properties().apply {
+            rarity(itemRarity)
+        }
+    )
 
     open val dittoLimit = true
 

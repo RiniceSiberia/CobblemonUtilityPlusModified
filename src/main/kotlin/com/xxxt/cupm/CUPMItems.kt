@@ -9,10 +9,12 @@ import com.xxxt.cupm.items.VoidFeatherItem
 import com.xxxt.cupm.items.caps.*
 import net.minecraft.world.item.Item
 import net.neoforged.bus.api.IEventBus
+import net.neoforged.bus.api.SubscribeEvent
+import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
-
+@EventBusSubscriber(modid = CUPMMod.MODID, bus = EventBusSubscriber.Bus.MOD)
 object CUPMItems {
 
 
@@ -43,13 +45,13 @@ object CUPMItems {
 
 
     val TRANSGENDER_ORB: DeferredItem<Item> =
-        ITEMS.register("transgender_orb", Supplier { TransgenderOrbItem() })
+        ITEMS.register("transgender_orb.json", Supplier { TransgenderOrbItem() })
 
     val VOID_FEATHER: DeferredItem<Item> =
         ITEMS.register("void_feather", Supplier { VoidFeatherItem() })
 
     val SHINY_LOTTERY: DeferredItem<Item> =
-        ITEMS.register("shiny_lottery", Supplier { ShinyLotteryItem() })
+        ITEMS.register("shiny_lottery.json", Supplier { ShinyLotteryItem() })
 
     val SHINY_CARD: DeferredItem<Item> =
         ITEMS.register("shiny_card", Supplier { ShinyCardItem() })

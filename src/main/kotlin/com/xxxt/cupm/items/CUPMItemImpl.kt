@@ -11,17 +11,22 @@ import net.minecraft.world.item.TooltipFlag
 import net.minecraft.world.level.Level
 
 abstract class CUPMItemImpl(
-    val itemRarity: Rarity,
     properties : Properties = Properties()
-) : CobblemonItem(properties.apply {
-    rarity(itemRarity)
-}) {
+) : CobblemonItem(properties) {
+
+    constructor(itemRarity: Rarity) : this(
+        Properties().apply {
+            rarity(itemRarity)
+        }
+    )
+
+
     abstract val name: String
 
 
     val itemNamePath = "${basicPath}$name"
 
-    val hoverText = Component.translatable("$itemNamePath.tooltip")
+    open val hoverText = Component.translatable("$itemNamePath.tooltip")
 
     val msgPath = "$itemNamePath.msg."
 

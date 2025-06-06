@@ -13,11 +13,15 @@ import net.minecraft.world.item.Rarity
 import net.minecraft.world.level.Level
 
 
-abstract class ShiftCapImpl(itemRarity: Rarity) : CapImpl(
-    itemRarity,
-    properties = Properties().apply {
-        this.component(DataComponents.CUSTOM_NAME,
-                    Component.translatable("item.cobblemon_utility_plus_modified.silver_cap")
+abstract class ShiftCapImpl(
+    itemRarity: Rarity,
+    properties : Properties= Properties(),
+    override val name: String,
+) : CapImpl(
+    properties = properties.apply {
+        rarity(itemRarity)
+        component(DataComponents.CUSTOM_NAME,
+                    Component.translatable("${basicPath}${name}")
                         .append("(").append(Stats.HP.displayName).append(")"))
     }){
 
@@ -32,7 +36,7 @@ abstract class ShiftCapImpl(itemRarity: Rarity) : CapImpl(
 
                 stack.set(
                     DataComponents.CUSTOM_NAME,
-                    Component.translatable("item.cobblemon_utility_plus_modified.silver_cap")
+                    Component.translatable("item.cobblemon_utility_plus_modified.${name}")
                         .append("(").append(statTranslate(mode).displayName).append(")"))
 
                 stack.set(CUPMTags.CAP_STATE_TAG.get(),(mode+1)%6)

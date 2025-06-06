@@ -5,6 +5,7 @@ import com.cobblemon.mod.common.item.battle.BagItem
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.xxxt.cupm.CUPMTags.BINDING_PLAYER_NAME_TAG
 import com.xxxt.cupm.CUPMTags.EXPIRE_TIME_STAMP_TAG
+import com.xxxt.cupm.items.CUPMItemImpl
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer
@@ -18,9 +19,16 @@ import net.minecraft.world.level.Level
 import java.util.*
 
 abstract class CUPMSelectingItemImpl(
-    itemRarity: Rarity,
     properties : Properties = Properties()
-) : CUPMItemImpl(itemRarity,properties), PokemonSelectingItem{
+) : CUPMItemImpl(properties), PokemonSelectingItem{
+
+    constructor(itemRarity: Rarity) : this(
+        Properties().apply {
+            rarity(itemRarity)
+        }
+    )
+
+
     override val bagItem: BagItem? = null
     override fun canUseOnPokemon(pokemon: Pokemon): Boolean = pokemon.isPlayerOwned()
 

@@ -12,9 +12,7 @@ import net.minecraft.world.InteractionResultHolder
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Rarity
 
-class ObsidianCapItem: ShiftCapImpl(Rarity.COMMON)   {
-
-    override val name: String = "obsidian_cap"
+class ObsidianCapItem: ShiftCapImpl(Rarity.COMMON, name = "obsidian_cap")   {
 
     override val dittoLimit: Boolean = false
 

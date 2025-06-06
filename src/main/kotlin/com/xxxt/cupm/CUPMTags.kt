@@ -8,10 +8,11 @@ import net.minecraft.core.registries.Registries
 import net.minecraft.network.codec.ByteBufCodecs
 import net.minecraft.util.ExtraCodecs
 import net.neoforged.bus.api.IEventBus
+import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.*
-
+@EventBusSubscriber(modid = CUPMMod.MODID, bus = EventBusSubscriber.Bus.MOD)
 object CUPMTags {
 
     val TAGS = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, CUPMMod.MODID)

@@ -24,8 +24,13 @@ class DevolutionRelicItem() : CUPMSelectingItemImpl(Rarity.RARE) {
                     stack.shrink(1)
                 }
                 pokemon.entity?.playSound(SoundEvents.ENCHANTMENT_TABLE_USE, 1F, 1F)
-                player.sendSystemMessage(Component.translatable("${msgPath}success",pokemon.nickname))
                 val preEvolve = pokeDevolution.species
+                player.sendSystemMessage(
+                    Component.translatable(
+                        "${msgPath}success",
+                        pokemon.nickname,
+                        preEvolve.translatedName
+                        ))
                 pokemon.species = preEvolve
                 return InteractionResultHolder.success(stack)
             } else {
