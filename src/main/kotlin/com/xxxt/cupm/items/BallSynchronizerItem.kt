@@ -24,10 +24,10 @@ class BallSynchronizerItem() : CUPMSelectingItemImpl(itemRarity = Rarity.RARE) {
         if (heldItem is PokeBallItem) {
             val pokeBall = heldItem.pokeBall
             if (Config.convertPokeBallAfterUsing && pokeBall == PokeBalls.CHERISH_BALL){
-                val mutableComponent = Component.translatable("${msgPath}to_cherish_prohibit")
+                val mutableComponent = Component.translatable("${getItemMsgPath()}to_cherish_prohibit")
                 player.sendSystemMessage(mutableComponent)
             }else if(Config.convertPokeBallAfterUsing && pokemon.caughtBall == PokeBalls.CHERISH_BALL){
-                val mutableComponent = Component.translatable("${msgPath}from_cherish_prohibit")
+                val mutableComponent = Component.translatable("${getItemMsgPath()}from_cherish_prohibit")
                 player.sendSystemMessage(mutableComponent)
             }else{
                 pokemon.caughtBall = pokeBall
@@ -39,7 +39,7 @@ class BallSynchronizerItem() : CUPMSelectingItemImpl(itemRarity = Rarity.RARE) {
                 return InteractionResultHolder.success(stack)
             }
         } else if (!(player.level()).isClientSide) {
-            val mutableComponent = Component.translatable("${msgPath}need_ball")
+            val mutableComponent = Component.translatable("${getItemMsgPath()}need_ball")
             player.sendSystemMessage(mutableComponent)
         }
         return InteractionResultHolder.fail(stack)

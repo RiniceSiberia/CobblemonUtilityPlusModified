@@ -12,7 +12,7 @@ import net.minecraft.world.item.Rarity
 
 class TransgenderOrbItem() : CUPMSelectingItemImpl(itemRarity = Rarity.RARE) {
 
-    override val name: String = "transgender_orb.json"
+    override val name: String = "transgender_orb"
 
     override fun applyToPokemon(
         player: ServerPlayer,
@@ -43,7 +43,7 @@ class TransgenderOrbItem() : CUPMSelectingItemImpl(itemRarity = Rarity.RARE) {
             }
         }
         val genderError = Component.translatable(
-            "${msgPath}can_not_change_gender",
+            "${getItemMsgPath()}can_not_change_gender",
             pokeName)
         player.sendSystemMessage(genderError)
         return InteractionResultHolder.fail(stack)

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0":"cobblemon_utility:item/golden_cap"
+    "layer0":"cobblemon_utility_plus_modified:item/golden_cap"
   }
 }

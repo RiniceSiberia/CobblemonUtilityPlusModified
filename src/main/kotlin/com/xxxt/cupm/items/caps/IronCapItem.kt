@@ -5,6 +5,7 @@ import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.xxxt.cupm.CUPMTags
 import com.xxxt.cupm.Config
+import com.xxxt.cupm.items.getItemMsgPath
 import com.xxxt.cupm.utils.getVCount
 import com.xxxt.cupm.utils.isIVMax
 import com.xxxt.cupm.utils.statTranslate
@@ -39,7 +40,7 @@ class IronCapItem() : ShiftCapImpl(itemRarity = Rarity.UNCOMMON, name = "iron_ca
             }
         } else if (!(player.level()).isClientSide) {
             val pokeName = pokemon.getDisplayName()
-            val mutableComponent = Component.translatable("${msgPath}has_iv_max",pokeName,statTranslate(mode).displayName)
+            val mutableComponent = Component.translatable("${getItemMsgPath()}has_iv_max",pokeName,statTranslate(mode).displayName)
             player.sendSystemMessage(mutableComponent)
         }
         return InteractionResultHolder.fail(stack)

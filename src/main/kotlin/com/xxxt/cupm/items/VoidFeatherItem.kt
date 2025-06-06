@@ -33,7 +33,7 @@ class VoidFeatherItem : CUPMSelectingItemImpl(itemRarity = Rarity.UNCOMMON) {
             return InteractionResultHolder.success(stack)
         }
 
-            val mutableComponent = Component.translatable("${msgPath}has_evs_zero")
+            val mutableComponent = Component.translatable("${getItemMsgPath()}has_evs_zero")
             player.sendSystemMessage(mutableComponent)
         return InteractionResultHolder.fail(stack)
     }

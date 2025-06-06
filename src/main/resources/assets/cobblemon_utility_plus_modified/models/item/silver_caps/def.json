@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "item/silver_caps/def"
+        "layer0": "cobblemon_utility_plus_modified:item/silver_caps/def"
     }
 }

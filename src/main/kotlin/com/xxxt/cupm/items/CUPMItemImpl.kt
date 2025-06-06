@@ -1,14 +1,14 @@
 package com.xxxt.cupm.items
 
 import com.cobblemon.mod.common.item.CobblemonItem
+import com.mojang.logging.LogUtils
+import com.xxxt.cupm.items.CUPMItemImpl.Companion.basicPath
 import net.minecraft.network.chat.Component
-import net.minecraft.world.InteractionHand
-import net.minecraft.world.InteractionResultHolder
-import net.minecraft.world.entity.player.Player
+import net.minecraft.network.chat.MutableComponent
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Rarity
 import net.minecraft.world.item.TooltipFlag
-import net.minecraft.world.level.Level
+import org.slf4j.Logger
 
 abstract class CUPMItemImpl(
     properties : Properties = Properties()
@@ -21,14 +21,13 @@ abstract class CUPMItemImpl(
     )
 
 
-    abstract val name: String
+    abstract val name : String
 
+    open val hoverTextPath
+        get() = "${getItemPath()}.tooltip"
 
-    val itemNamePath = "${basicPath}$name"
-
-    open val hoverText = Component.translatable("$itemNamePath.tooltip")
-
-    val msgPath = "$itemNamePath.msg."
+    open val hoverText: MutableComponent
+        get() = Component.translatable(hoverTextPath)
 
     override fun appendHoverText(
         stack: ItemStack,
@@ -36,6 +35,12 @@ abstract class CUPMItemImpl(
         listComponent: MutableList<Component?>,
         tooltipFlag: TooltipFlag
     ) {
+//        val logger = LogUtils.getLogger()
+//        logger.info("name:${name}")
+//        logger.info("item_path:${getItemPath()}")
+//        logger.info("hover_text_path:${hoverTextPath}")
+//        logger.info("tooltips:${hoverText}")
+//        logger.info("msgPath:${getItemMsgPath()}")
         listComponent.add(hoverText)
         super.appendHoverText(stack, context, listComponent, tooltipFlag)
     }
@@ -43,3 +48,7 @@ abstract class CUPMItemImpl(
         val basicPath = "item.cobblemon_utility_plus_modified."
     }
 }
+
+fun CUPMItemImpl.getItemPath() : String = "${basicPath}${name}"
+
+fun CUPMItemImpl.getItemMsgPath() : String = "${this.getItemPath()}.msg."

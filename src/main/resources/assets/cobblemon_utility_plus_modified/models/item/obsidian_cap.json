@@ -5,19 +5,19 @@
   },
   "overrides": [
     {
-      "predicate": { "cap_stat": 1 },
+      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 1 },
       "model": "cobblemon_utility_plus_modified:item/obsidian_caps/atk" },
     {
-      "predicate": { "cap_stat": 2 },
+      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 2 },
       "model": "cobblemon_utility_plus_modified:item/obsidian_caps/def" },
     {
-      "predicate": { "cap_stat": 3 },
+      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 3 },
       "model": "cobblemon_utility_plus_modified:item/obsidian_caps/spa" },
     {
-      "predicate": { "cap_stat": 4 },
+      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 4 },
       "model": "cobblemon_utility_plus_modified:item/obsidian_caps/spd" },
     {
-      "predicate": { "cap_stat": 5 },
+      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 5 },
       "model": "cobblemon_utility_plus_modified:item/obsidian_caps/spe" }
   ]
 }

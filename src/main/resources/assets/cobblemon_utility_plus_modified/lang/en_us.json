@@ -15,7 +15,7 @@
 
   "item.cobblemon_utility_plus_modified.void_feather": "Void Feather",
   "item.cobblemon_utility_plus_modified.void_feather.tooltip": "Clears the Pokémon's EVs",
-  "item.cobblemon_utility_plus_modified.void_feather.toolti.msg.has_evs_zero": "The Pokémon has no EVs to clear",
+  "item.cobblemon_utility_plus_modified.void_feather.msg.has_evs_zero": "The Pokémon has no EVs to clear",
 
   "item.cobblemon_utility_plus_modified.devolution_relic": "Devolution Relic",
   "item.cobblemon_utility_plus_modified.devolution_relic.tooltip": "Devolves the Pokémon to its previous form",
@@ -32,6 +32,7 @@
   "item.cobblemon_utility_plus_modified.shiny_lottery.msg.has_shiny": "This Pokémon is already shiny and cannot use the Shiny Lottery",
 
   "item.cobblemon_utility_plus_modified.shiny_card": "Shiny Card",
+  "item.cobblemon_utility_plus_modified.shiny_card.tooltip": "Makes Targeted Pokémon shiny",
   "item.cobblemon_utility_plus_modified.shiny_card.msg.has_shiny": "This Pokémon is already shiny and cannot use the Shiny Card",
 
   "item.cobblemon_utility_plus_modified.copper_cap": "Copper Crown",
@@ -70,8 +71,6 @@
   "item.cobblemon_utility_plus_modified.ball_synchronizer.tooltip": "Synchronizes the caught ball to the one currently held by the Pokémon. No cost or return",
 
   "item.cobblemon_utility_plus_modified.transgender_orb": "Gender Orb",
-  "item.cobblemon_utility_plus_modified.transgender_orb.msg.can_not_change_gender": "This Pokémon is genderless or cannot change gender",
-
-  "item.cobblemon_utility_plus_modified.size_changer": "Size Candy",
-  "item.cobblemon_utility_plus_modified.size_changer.tooltip": "Changes the Pokémon's size to %1$s. Sneak-right-click to switch category"
+  "item.cobblemon_utility_plus_modified.transgender_orb.tooltip": "Change your Pokémon's gender",
+  "item.cobblemon_utility_plus_modified.transgender_orb.msg.can_not_change_gender": "This Pokémon is genderless or cannot change gender"
 }

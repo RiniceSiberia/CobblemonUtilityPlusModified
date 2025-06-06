@@ -1,7 +1,6 @@
-package com.xxxt.cupm.Item
+package com.xxxt.cupm.items
 
 import com.cobblemon.mod.common.pokemon.Pokemon
-import com.xxxt.cupm.items.CUPMSelectingItemImpl
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.sounds.SoundEvents
@@ -27,14 +26,14 @@ class DevolutionRelicItem() : CUPMSelectingItemImpl(Rarity.RARE) {
                 val preEvolve = pokeDevolution.species
                 player.sendSystemMessage(
                     Component.translatable(
-                        "${msgPath}success",
+                        "${getItemMsgPath()}success",
                         pokemon.nickname,
                         preEvolve.translatedName
                         ))
                 pokemon.species = preEvolve
                 return InteractionResultHolder.success(stack)
             } else {
-                player.sendSystemMessage(Component.translatable("${msgPath}fail",pokemon.nickname))
+                player.sendSystemMessage(Component.translatable("${getItemMsgPath()}fail",pokemon.nickname))
             }
         return InteractionResultHolder.fail(stack)
     }

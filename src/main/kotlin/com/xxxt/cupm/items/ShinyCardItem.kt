@@ -28,7 +28,7 @@ class ShinyCardItem : CUPMSelectingItemImpl(itemRarity = Rarity.EPIC) {
             return InteractionResultHolder.success(stack)
         }
 
-            val mutableComponent = Component.translatable("${msgPath}has_shiny")
+            val mutableComponent = Component.translatable("${getItemMsgPath()}has_shiny")
             player.sendSystemMessage(mutableComponent)
         return InteractionResultHolder.fail(stack)
     }

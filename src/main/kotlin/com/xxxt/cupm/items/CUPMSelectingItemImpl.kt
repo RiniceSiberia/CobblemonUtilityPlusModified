@@ -77,7 +77,7 @@ abstract class CUPMSelectingItemImpl(
 
             listComponent.add(
                 Component.translatable(
-                    "${basicPath}tooltip.expire_msg",
+                    "${basicPath}tooltip.expire",
                     it.toString(),
                     weeksText.append(daysText.append(hoursText.append(minutesText.append(secondsText))))
                         .withStyle(ChatFormatting.ITALIC)
@@ -90,7 +90,7 @@ abstract class CUPMSelectingItemImpl(
         }
 
         stack.components.get(BINDING_PLAYER_NAME_TAG.get())?.also {
-            listComponent.add(Component.translatable("${basicPath}tooltip.binding_msg",it))
+            listComponent.add(Component.translatable("${basicPath}tooltip.binding",it))
         }
     }
 

@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "item/obsidian_caps/spa"
+        "layer0": "cobblemon_utility_plus_modified:item/obsidian_caps/spa"
     }
 }

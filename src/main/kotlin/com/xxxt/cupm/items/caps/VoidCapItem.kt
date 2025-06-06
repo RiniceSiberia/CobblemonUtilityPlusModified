@@ -4,6 +4,7 @@ import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.xxxt.cupm.Config
+import com.xxxt.cupm.items.getItemMsgPath
 import com.xxxt.cupm.utils.allIVZero
 import com.xxxt.cupm.utils.setAllIVZero
 import net.minecraft.network.chat.Component
@@ -14,7 +15,8 @@ import net.minecraft.world.item.Rarity
 
 class VoidCapItem() : CapImpl(itemRarity = Rarity.UNCOMMON) {
 
-    override val name: String = "void_cap"
+    override val name: String
+        get() = "void_cap"
 
     override val dittoLimit: Boolean = false
 
@@ -42,7 +44,7 @@ class VoidCapItem() : CapImpl(itemRarity = Rarity.UNCOMMON) {
             return InteractionResultHolder.success(stack)
         } else if (!(player.level()).isClientSide) {
             val pokeName = pokemon.getDisplayName().string
-            val mutableComponent = Component.translatable("${msgPath}has_iv_max",pokeName)
+            val mutableComponent = Component.translatable("${getItemMsgPath()}has_iv_min",pokeName)
             player.sendSystemMessage(mutableComponent)
         }
         return InteractionResultHolder.fail(stack)

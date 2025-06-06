@@ -5,17 +5,17 @@
     "item.cobblemon_utility_plus_modified.msg.binding_deviation": "该道具的绑定者为%1$s，你无法使用它",
     "item.cobblemon_utility_plus_modified.tooltip.binding": "这个物品被%1$s锁定了，无法使用",
 
-    "item.cobblemon_utility_plus_modified.tooltip.expire": "将在%1$s后到期，距离到期时间还有%2$s",
+    "item.cobblemon_utility_plus_modified.tooltip.expire": "将在%1$s后到期，距离到期时间还有:%2$s",
 
-    "unit.time.week": "%1$s礼拜",
-    "unit.time.day": "%1$s天",
+    "unit.time.week": "%1$s周",
+    "unit.time.day": "%1$s日",
     "unit.time.hour": "%1$s点",
     "unit.time.second": "%1$s秒",
     "unit.time.minute": "%1$s分",
 
     "item.cobblemon_utility_plus_modified.void_feather": "虚空羽毛",
     "item.cobblemon_utility_plus_modified.void_feather.tooltip": "清空宝可梦的努力值",
-    "item.cobblemon_utility_plus_modified.void_feather.toolti.msg.has_evs_zero": "宝可梦的所有努力值均为0，无法使用虚空羽毛",
+    "item.cobblemon_utility_plus_modified.void_feather.msg.has_evs_zero": "宝可梦的所有努力值均为0，无法使用虚空羽毛",
 
     "item.cobblemon_utility_plus_modified.devolution_relic": "退化遗物",
     "item.cobblemon_utility_plus_modified.devolution_relic.tooltip": "将宝可梦退化至它的上一个形态",
@@ -32,21 +32,22 @@
     "item.cobblemon_utility_plus_modified.shiny_lottery.msg.has_shiny": "这只宝可梦已经是闪光了，无法使用闪光彩票",
 
     "item.cobblemon_utility_plus_modified.shiny_card": "闪光卡片",
+    "item.cobblemon_utility_plus_modified.shiny_card.tooltip": "将目标精灵变为闪光版本",
     "item.cobblemon_utility_plus_modified.shiny_card.msg.has_shiny": "这只宝可梦已经是闪光了，无法使用闪光卡片",
 
-    "item.cobblemon_utility_plus_modified.copper_cap": "铜王冠",
+    "item.cobblemon_utility_plus_modified.copper_cap": "青铜王冠",
     "item.cobblemon_utility_plus_modified.copper_cap.tooltip": "随机宝可梦的%1$s个体值，蹲下右键切换类别",
-    "item.cobblemon_utility_plus_modified.copper_cap.msg.ditto_prohibit": "无法对百变怪使用铜王冠",
+    "item.cobblemon_utility_plus_modified.copper_cap.msg.ditto_prohibit": "无法对百变怪使用青铜王冠",
 
     "item.cobblemon_utility_plus_modified.golden_cap": "金色王冠",
     "item.cobblemon_utility_plus_modified.golden_cap.tooltip": "提升所有个体值至最大值",
     "item.cobblemon_utility_plus_modified.golden_cap.msg.has_iv_max": "%1$s的所有个体值均已满，无法使用金色王冠",
     "item.cobblemon_utility_plus_modified.golden_cap.msg.ditto_prohibit": "无法对百变怪使用金色王冠",
 
-    "item.cobblemon_utility_plus_modified.iron_cap": "铁王冠",
+    "item.cobblemon_utility_plus_modified.iron_cap": "铸铁王冠",
     "item.cobblemon_utility_plus_modified.iron_cap.tooltip": "提升宝可梦的%1$s个体值1点，蹲下右键切换类别",
     "item.cobblemon_utility_plus_modified.iron_cap.msg.has_iv_max": "%1$s的%2$s已满，无法使用铁王冠",
-    "item.cobblemon_utility_plus_modified.iron_cap.msg.ditto_prohibit": "无法对百变怪使用铁王冠",
+    "item.cobblemon_utility_plus_modified.iron_cap.msg.ditto_prohibit": "无法对百变怪使用铸铁王冠",
 
     "item.cobblemon_utility_plus_modified.obsidian_cap": "黑曜石王冠",
     "item.cobblemon_utility_plus_modified.obsidian_cap.tooltip": "将宝可梦的%1$s个体值归零，蹲下右键切换类别",
@@ -70,9 +71,8 @@
     "item.cobblemon_utility_plus_modified.ball_synchronizer.tooltip": "可以将捕捉到精灵的球同步为精灵当前携带的球，不消耗也不返还",
 
     "item.cobblemon_utility_plus_modified.transgender_orb": "变性珠",
-    "item.cobblemon_utility_plus_modified.transgender_orb.msg.can_not_change_gender": "该宝可梦为无性别或无法变性",
+    "item.cobblemon_utility_plus_modified.transgender_orb.tooltip": "改变宝可梦的性别",
+    "item.cobblemon_utility_plus_modified.transgender_orb.msg.can_not_change_gender": "该宝可梦为无性别或无法变性"
 
-    "item.cobblemon_utility_plus_modified.size_changer": "伸缩糖果",
-    "item.cobblemon_utility_plus_modified.size_changer.tooltip": "将宝可梦的大小变为%1$s，蹲下右键切换类别"
 
 }    

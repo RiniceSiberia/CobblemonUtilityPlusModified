@@ -1,6 +1,6 @@
 package com.xxxt.cupm
 
-import com.xxxt.cupm.Item.DevolutionRelicItem
+import com.xxxt.cupm.items.DevolutionRelicItem
 import com.xxxt.cupm.items.BallSynchronizerItem
 import com.xxxt.cupm.items.ShinyCardItem
 import com.xxxt.cupm.items.ShinyLotteryItem
@@ -9,8 +9,6 @@ import com.xxxt.cupm.items.VoidFeatherItem
 import com.xxxt.cupm.items.caps.*
 import net.minecraft.world.item.Item
 import net.neoforged.bus.api.IEventBus
-import net.neoforged.bus.api.SubscribeEvent
-import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
@@ -40,18 +38,18 @@ object CUPMItems {
     val VOID_CAP: DeferredItem<Item> =
         ITEMS.register("void_cap", Supplier { VoidCapItem() })
 
-    val BALLSYNCHRONIZER: DeferredItem<Item> =
+    val BALL_SYNCHRONIZER: DeferredItem<Item> =
         ITEMS.register("ball_synchronizer", Supplier { BallSynchronizerItem() })
 
 
     val TRANSGENDER_ORB: DeferredItem<Item> =
-        ITEMS.register("transgender_orb.json", Supplier { TransgenderOrbItem() })
+        ITEMS.register("transgender_orb", Supplier { TransgenderOrbItem() })
 
     val VOID_FEATHER: DeferredItem<Item> =
         ITEMS.register("void_feather", Supplier { VoidFeatherItem() })
 
     val SHINY_LOTTERY: DeferredItem<Item> =
-        ITEMS.register("shiny_lottery.json", Supplier { ShinyLotteryItem() })
+        ITEMS.register("shiny_lottery", Supplier { ShinyLotteryItem() })
 
     val SHINY_CARD: DeferredItem<Item> =
         ITEMS.register("shiny_card", Supplier { ShinyCardItem() })
@@ -67,7 +65,7 @@ object CUPMItems {
         IRON_CAP,
         OBSIDIAN_CAP,
         VOID_CAP,
-        BALLSYNCHRONIZER,
+        BALL_SYNCHRONIZER,
         TRANSGENDER_ORB,
         VOID_FEATHER,
         SHINY_LOTTERY,

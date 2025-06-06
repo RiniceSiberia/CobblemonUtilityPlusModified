@@ -3,6 +3,7 @@ package com.xxxt.cupm.items.caps
 import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.xxxt.cupm.CUPMTags
+import com.xxxt.cupm.items.getItemMsgPath
 import com.xxxt.cupm.utils.isIVZero
 import com.xxxt.cupm.utils.setIVZero
 import com.xxxt.cupm.utils.statTranslate
@@ -12,7 +13,7 @@ import net.minecraft.world.InteractionResultHolder
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Rarity
 
-class ObsidianCapItem: ShiftCapImpl(Rarity.COMMON, name = "obsidian_cap")   {
+class ObsidianCapItem: ShiftCapImpl(itemRarity = Rarity.COMMON,name = "obsidian_cap")   {
 
     override val dittoLimit: Boolean = false
 
@@ -34,7 +35,7 @@ class ObsidianCapItem: ShiftCapImpl(Rarity.COMMON, name = "obsidian_cap")   {
             return InteractionResultHolder.success(stack)
         }else{
             val pokeName = pokemon.getDisplayName()
-            val mutableComponent = Component.translatable("${msgPath}has_iv_max",pokeName,statTranslate(mode).displayName)
+            val mutableComponent = Component.translatable("${getItemMsgPath()}has_iv_max",pokeName,statTranslate(mode).displayName)
             player.sendSystemMessage(mutableComponent)
         }
         return InteractionResultHolder.fail(stack)

@@ -2,8 +2,11 @@ package com.xxxt.cupm.items.caps
 
 import com.cobblemon.mod.common.api.pokemon.stats.Stats
 import com.xxxt.cupm.CUPMTags
+import com.xxxt.cupm.items.getItemMsgPath
+import com.xxxt.cupm.items.getItemPath
 import com.xxxt.cupm.utils.statTranslate
 import net.minecraft.core.component.DataComponents
+import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResultHolder
@@ -14,9 +17,9 @@ import net.minecraft.world.level.Level
 
 
 abstract class ShiftCapImpl(
+    override val name : String,
     itemRarity: Rarity,
-    properties : Properties= Properties(),
-    override val name: String,
+    properties : Properties= Properties()
 ) : CapImpl(
     properties = properties.apply {
         rarity(itemRarity)
@@ -30,16 +33,20 @@ abstract class ShiftCapImpl(
             val stack = user.getItemInHand(hand)
             if (!world.isClientSide) {
                 val tag = stack.components
-                val mode = tag.getOrDefault(
+                var mode = tag.getOrDefault(
                     CUPMTags.CAP_STATE_TAG.get(),
-                    0)%6
+                    0)
+                mode++
+                if (mode !in 0..5 ){
+                    mode = 0
+                }
 
                 stack.set(
                     DataComponents.CUSTOM_NAME,
-                    Component.translatable("item.cobblemon_utility_plus_modified.${name}")
+                    Component.translatable(getItemPath())
                         .append("(").append(statTranslate(mode).displayName).append(")"))
 
-                stack.set(CUPMTags.CAP_STATE_TAG.get(),(mode+1)%6)
+                stack.set(CUPMTags.CAP_STATE_TAG.get(),mode)
                 return InteractionResultHolder.success(stack)
             }
         }

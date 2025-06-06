@@ -4,10 +4,12 @@ import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.xxxt.cupm.Config
+import com.xxxt.cupm.items.getItemMsgPath
 import com.xxxt.cupm.utils.allIVMax
 import com.xxxt.cupm.utils.setAllVMax
 import net.minecraft.ChatFormatting
 import net.minecraft.core.component.DataComponents
+import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.InteractionResultHolder
@@ -22,9 +24,7 @@ class GoldenCapItem() : CapImpl(
                         .withStyle(ChatFormatting.GOLD))
     }
 ) {
-
-    override val name: String = "golden_cap"
-
+    override val name = "golden_cap"
 
     override fun applyToPokemon(
         player: ServerPlayer,
@@ -43,7 +43,7 @@ class GoldenCapItem() : CapImpl(
             return InteractionResultHolder.success(stack)
         }else{
             val pokeName = pokemon.getDisplayName()
-            val mutableComponent = Component.translatable("${msgPath}has_iv_max",pokeName)
+            val mutableComponent = Component.translatable("${getItemMsgPath()}has_iv_max",pokeName)
             player.sendSystemMessage(mutableComponent)
         }
         return InteractionResultHolder.fail(stack)
