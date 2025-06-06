@@ -12,7 +12,7 @@ import net.neoforged.fml.common.EventBusSubscriber
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.*
-@EventBusSubscriber(modid = CUPMMod.MODID, bus = EventBusSubscriber.Bus.MOD)
+//@EventBusSubscriber(modid = CUPMMod.MODID, bus = EventBusSubscriber.Bus.MOD)
 object CUPMTags {
 
     val TAGS = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, CUPMMod.MODID)

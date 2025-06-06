@@ -35,6 +35,12 @@ object CUPMCreativeModTabs {
         CREATIVE_MODE_TAB.register(eventBus)
     }
 
+    // 这个怎么改成static
+    // ？？？
+    //这个就是static,写在object里的都是static
+    //但转写成java的static要注解
+    @SubscribeEvent
+    @JvmStatic
     fun onBuildCreativeModeTabContentsEvent(event : BuildCreativeModeTabContentsEvent){
         if (event.tabKey == CreativeModeTabs.TOOLS_AND_UTILITIES){
             CUPMItems.ALL.forEach {item ->

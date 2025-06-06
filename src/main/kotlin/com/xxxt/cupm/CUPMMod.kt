@@ -1,23 +1,13 @@
 package com.xxxt.cupm
 
-import com.cobblemon.mod.common.Cobblemon
-import com.cobblemon.mod.common.client.CobblemonClient
-import com.cobblemon.mod.common.client.render.item.CobblemonModelPredicateRegistry
-import com.cobblemon.mod.neoforge.client.NeoForgeClientPlatformEventHandler
 import com.mojang.logging.LogUtils
 import com.xxxt.cupm.events.CUPMCommands
-import net.minecraft.client.gui.screens.Screen
-import net.minecraft.world.item.CreativeModeTabs
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.ModContainer
-import net.neoforged.fml.ModList
 import net.neoforged.fml.common.Mod
 import net.neoforged.fml.config.ModConfig
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory
 import net.neoforged.neoforge.common.NeoForge
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent
 import net.neoforged.neoforge.event.RegisterCommandsEvent
 
 
@@ -36,7 +26,7 @@ class CUPMMod(modEventBus: IEventBus, modContainer: ModContainer) {
 
         with(NeoForge.EVENT_BUS){
             addListener(::registerCommands)
-            addListener(CUPMCreativeModTabs::onBuildCreativeModeTabContentsEvent)
+//            addListener(CUPMCreativeModTabs::onBuildCreativeModeTabContentsEvent)
         }
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC)
 
