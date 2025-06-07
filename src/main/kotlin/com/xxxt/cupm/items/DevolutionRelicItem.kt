@@ -27,7 +27,7 @@ class DevolutionRelicItem() : CUPMSelectingItemImpl(Rarity.RARE) {
                 player.sendSystemMessage(
                     Component.translatable(
                         "${getItemMsgPath()}success",
-                        pokemon.nickname,
+                        pokemon.getDisplayName(),
                         preEvolve.translatedName
                         ))
                 pokemon.species = preEvolve

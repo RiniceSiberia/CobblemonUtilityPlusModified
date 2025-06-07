@@ -2,7 +2,6 @@ package com.xxxt.cupm.items.caps
 
 import com.cobblemon.mod.common.item.battle.BagItem
 import com.cobblemon.mod.common.pokemon.Pokemon
-import com.xxxt.cupm.items.CUPMItemImpl
 import com.xxxt.cupm.items.CUPMSelectingItemImpl
 import com.xxxt.cupm.utils.dittoUseCapCheck
 import net.minecraft.world.item.Rarity
@@ -17,6 +16,7 @@ abstract class CapImpl(
         }
     )
 
+
     open val dittoLimit = true
 
     final override val bagItem: BagItem? = null
@@ -27,6 +27,5 @@ abstract class CapImpl(
                     dittoUseCapCheck(pokemon)
                 } else true
     }
-
 
 }

@@ -1,0 +1,8 @@
+{
+  "insert_coin": {
+    "category": "player",
+    "sounds": [
+      "cobblemon_utility_plus_modified:insert_coin"
+    ]
+  }
+}

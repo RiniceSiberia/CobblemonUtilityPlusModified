@@ -38,6 +38,9 @@ object CUPMItems {
     val VOID_CAP: DeferredItem<Item> =
         ITEMS.register("void_cap", Supplier { VoidCapItem() })
 
+    val ICE_CAP: DeferredItem<Item> =
+        ITEMS.register("ice_cap", Supplier { IceCapItem() })
+
     val BALL_SYNCHRONIZER: DeferredItem<Item> =
         ITEMS.register("ball_synchronizer", Supplier { BallSynchronizerItem() })
 
@@ -65,6 +68,7 @@ object CUPMItems {
         IRON_CAP,
         OBSIDIAN_CAP,
         VOID_CAP,
+        ICE_CAP,
         BALL_SYNCHRONIZER,
         TRANSGENDER_ORB,
         VOID_FEATHER,

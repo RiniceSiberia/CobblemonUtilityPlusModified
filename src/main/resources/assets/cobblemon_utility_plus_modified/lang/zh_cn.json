@@ -1,79 +1,95 @@
 {
     "creative_tab.cobblemon_utility_plus_modified.utility_items": "方可梦实用道具",
 
-    "item.cobblemon_utility_plus_modified.msg.expire": "该物品已在%1$s时失效！",
-    "item.cobblemon_utility_plus_modified.msg.binding_deviation": "该道具的绑定者为%1$s，你无法使用它！",
-    "item.cobblemon_utility_plus_modified.tooltip.binding": "这个物品已经与%1$s绑定了，其他人无法使用！",
+    "item.cobblemon_utility_plus_modified.msg.expire": "该物品已在%1$s时失效!",
+    "item.cobblemon_utility_plus_modified.msg.binding_deviation": "该道具的绑定者为%1$s，你无法使用它!",
+    "item.cobblemon_utility_plus_modified.tooltip.binding": "这个物品已经与%1$s绑定了，其他人无法使用!",
 
     "item.cobblemon_utility_plus_modified.tooltip.expire": "将在%1$s后失效，距离失效时间还有:%2$s",
-    "item.cobblemon_utility_plus_modified.tooltip.expired": "该物品已在%1$s时失效！",
+    "item.cobblemon_utility_plus_modified.tooltip.expired": "该物品已在%1$s时失效!",
 
-    "unit.time.week",: "%1$s周",
-    "unit.time.day": "%1$s日",
-    "unit.time.hour": "%1$s点",
-    "unit.time.second": "%1$s秒",
-    "unit.time.minute": "%1$s分",
+    "unit.cobblemon_utility_plus_modified.time.week": "%1$s周",
+    "unit.cobblemon_utility_plus_modified.time.day": "%1$s日",
+    "unit.cobblemon_utility_plus_modified.time.hour": "%1$s点",
+    "unit.cobblemon_utility_plus_modified.time.second": "%1$s秒",
+    "unit.cobblemon_utility_plus_modified.time.minute": "%1$s分",
 
     "item.cobblemon_utility_plus_modified.void_feather": "虚空羽毛",
     "item.cobblemon_utility_plus_modified.void_feather.tooltip": "清空宝可梦的努力值",
-    "item.cobblemon_utility_plus_modified.void_feather.msg.has_evs_zero": "宝可梦的所有努力值均为0，无法使用虚空羽毛",
+    "item.cobblemon_utility_plus_modified.void_feather.msg.success": "你消耗了虚空羽毛,%1$s经过一阵眩晕后已经脑袋空空,努力值归零了!",
+    "item.cobblemon_utility_plus_modified.void_feather.msg.has_evs_zero": "宝可梦的所有努力值已均为0，无法使用虚空羽毛!",
 
     "item.cobblemon_utility_plus_modified.devolution_relic": "退化遗物",
     "item.cobblemon_utility_plus_modified.devolution_relic.tooltip": "将宝可梦退化至它的上一个形态",
-    "item.cobblemon_utility_plus_modified.devolution_relic.msg.success": "成功将你的%1$s退化至%2$s",
+    "item.cobblemon_utility_plus_modified.devolution_relic.msg.success": "成功将你的%1$s退化至%2$s!",
     "item.cobblemon_utility_plus_modified.devolution_relic.msg.fail": "你的%1$s不能退化",
 
     "item.cobblemon_utility_plus_modified.shiny_lottery": "闪光彩票",
-    "item.cobblemon_utility_plus_modified.shiny_lottery.tooltip": "有1/%1$s概率使宝可梦变为闪光版本，对神兽使用则为1/%2$s",
-    "item.cobblemon_utility_plus_modified.shiny_lottery.msg.basic_denominator_nan_err": "服务端设置错误，闪光概率为NaN",
-    "item.cobblemon_utility_plus_modified.shiny_lottery.msg.legendary_multiply_nan_err": "服务端设置错误，神兽闪光概率为NaN",
-    "item.cobblemon_utility_plus_modified.shiny_lottery.msg.result_denominator_nan_err": "服务端设置错误，总抽奖数为NaN",
-    "item.cobblemon_utility_plus_modified.shiny_lottery.msg.success": "玩家%1$s成功使用闪光彩票将ta的%2$s变为了闪光版本！",
+    "item.cobblemon_utility_plus_modified.shiny_lottery.tooltip": "有1/%1$s概率使宝可梦变为闪光版本，对神兽使用则为1/%2$s!",
+    "item.cobblemon_utility_plus_modified.shiny_lottery.msg.basic_denominator_nan_err": "服务端设置错误，闪光概率为NaN!",
+    "item.cobblemon_utility_plus_modified.shiny_lottery.msg.legendary_multiply_nan_err": "服务端设置错误，神兽闪光概率为NaN!",
+    "item.cobblemon_utility_plus_modified.shiny_lottery.msg.result_denominator_nan_err": "服务端设置错误，总抽奖数为NaN!",
+    "item.cobblemon_utility_plus_modified.shiny_lottery.msg.success": "号外号外!\n玩家%1$s成功使用闪光彩票将ta的%2$s变为了闪光版本！",
     "item.cobblemon_utility_plus_modified.shiny_lottery.msg.fail": "你没能抽中闪光...",
     "item.cobblemon_utility_plus_modified.shiny_lottery.msg.has_shiny": "这只宝可梦已经是闪光了，无法使用闪光彩票",
 
-    "item.cobblemon_utility_plus_modified.shiny_card": "闪光卡片",
+    "item.cobblemon_utility_plus_modified.shiny_card": "闪光卡",
     "item.cobblemon_utility_plus_modified.shiny_card.tooltip": "将目标精灵变为闪光版本",
+    "item.cobblemon_utility_plus_modified.shiny_card.msg.success": "消耗了闪光卡,将%1$s变为了闪光版本!",
     "item.cobblemon_utility_plus_modified.shiny_card.msg.has_shiny": "这只宝可梦已经是闪光了，无法使用闪光卡片",
 
     "item.cobblemon_utility_plus_modified.copper_cap": "青铜王冠",
     "item.cobblemon_utility_plus_modified.copper_cap.tooltip": "随机宝可梦的%1$s个体值，蹲下右键切换类别",
+    "item.cobblemon_utility_plus_modified.copper_cap.msg.success": "消耗了青铜王冠,将%1$s的%2$s个体值随机为了%3$s!",
     "item.cobblemon_utility_plus_modified.copper_cap.msg.ditto_prohibit": "无法对百变怪使用青铜王冠",
 
     "item.cobblemon_utility_plus_modified.golden_cap": "金色王冠",
     "item.cobblemon_utility_plus_modified.golden_cap.tooltip": "提升所有个体值至最大值",
     "item.cobblemon_utility_plus_modified.golden_cap.msg.has_iv_max": "%1$s的所有个体值均已满，无法使用金色王冠",
+    "item.cobblemon_utility_plus_modified.golden_cap.msg.success": "消耗了金色王冠,将%1$s的所有个体值变为最大了!",
     "item.cobblemon_utility_plus_modified.golden_cap.msg.ditto_prohibit": "无法对百变怪使用金色王冠",
 
     "item.cobblemon_utility_plus_modified.iron_cap": "铸铁王冠",
     "item.cobblemon_utility_plus_modified.iron_cap.tooltip": "提升宝可梦的%1$s个体值1点，蹲下右键切换类别",
     "item.cobblemon_utility_plus_modified.iron_cap.msg.has_iv_max": "%1$s的%2$s已满，无法使用铁王冠",
+    "item.cobblemon_utility_plus_modified.iron_cap.msg.success": "消耗了铸铁王冠,让%1$s的%2$s个体值增加了1点!",
     "item.cobblemon_utility_plus_modified.iron_cap.msg.ditto_prohibit": "无法对百变怪使用铸铁王冠",
 
     "item.cobblemon_utility_plus_modified.obsidian_cap": "黑曜石王冠",
     "item.cobblemon_utility_plus_modified.obsidian_cap.tooltip": "将宝可梦的%1$s个体值归零，蹲下右键切换类别",
+    "item.cobblemon_utility_plus_modified.obsidian_cap.msg.success": "消耗了黑曜石王冠,让%1$s的%2$s个体值归零了!",
     "item.cobblemon_utility_plus_modified.obsidian_cap.msg.has_iv_min": "%1$s的%2$s已为0，无法使用黑曜石王冠",
 
     "item.cobblemon_utility_plus_modified.silver_cap": "银色王冠",
     "item.cobblemon_utility_plus_modified.silver_cap.tooltip": "提升宝可梦的%1$s个体值至最大值，蹲下右键切换类别", 
     "item.cobblemon_utility_plus_modified.silver_cap.msg.has_iv_max": "%1$s的%2$s已满，无法使用银色王冠",
+    "item.cobblemon_utility_plus_modified.silver_cap.msg.success": "消耗了银色王冠,让%1$s的%2$s个体值变为最大了!",
     "item.cobblemon_utility_plus_modified.silver_cap.msg.ditto_prohibit": "无法对百变怪使用银色王冠",
        
     "item.cobblemon_utility_plus_modified.void_cap": "虚空王冠",
     "item.cobblemon_utility_plus_modified.void_cap.tooltip": "将宝可梦的所有个体值归零",
     "item.cobblemon_utility_plus_modified.void_cap.msg.has_iv_min": "%1$s的所有个体值均为0，无法使用虚空王冠",
+    "item.cobblemon_utility_plus_modified.void_cap.msg.success": "消耗了虚空王冠,让%1$s的所有个体值归零了!",
+
+    "item.cobblemon_utility_plus_modified.ice_cap": "冰霜王冠",
+    "item.cobblemon_utility_plus_modified.ice_cap.tooltip": "只能对未发现蛋群的精灵使用,精灵的个体值有三项会最大化,其他项会最小化",
+    "item.cobblemon_utility_plus_modified.ice_cap.msg.success": "消耗了冰霜王冠,让%1$s的个体值极端化了",
+    "item.cobblemon_utility_plus_modified.ice_cap.msg.has_iv_full": "%1$s的个体值已经很优秀了，无法使用冰霜王冠了",
+    "item.cobblemon_utility_plus_modified.ice_cap.msg.cannot_use": "只有为了强大舍弃繁衍的精灵才能使用冰霜王冠,%1$s并不是未发现蛋群的精灵!",
 
     "item.cobblemon_utility_plus_modified.msg.ditto_prohibit": "无法对百变怪使用此道具",
 
     "item.cobblemon_utility_plus_modified.ball_synchronizer": "精灵球同步器",
-    "item.cobblemon_utility_plus_modified.ball_synchronizer.msg.from_cherish_prohibit": "由于服务器设置，无法将贵重球同步为其他精灵球",
-    "item.cobblemon_utility_plus_modified.ball_synchronizer.msg.to_cherish_prohibit": "由于服务器设置，无法将此精灵球同步为贵重球",
-    "item.cobblemon_utility_plus_modified.ball_synchronizer.msg.need_ball": "需要给精灵携带一个精灵球才能进行同步",
-    "item.cobblemon_utility_plus_modified.ball_synchronizer.tooltip": "可以将捕捉到精灵的球同步为精灵当前携带的球，不消耗也不返还",
+    "item.cobblemon_utility_plus_modified.ball_synchronizer.msg.from_cherish_prohibit": "由于服务器设置，无法将贵重球同步为其他精灵球.",
+    "item.cobblemon_utility_plus_modified.ball_synchronizer.msg.to_cherish_prohibit": "由于服务器设置，无法将此精灵球同步为贵重球.",
+    "item.cobblemon_utility_plus_modified.ball_synchronizer.msg.need_ball": "需要给精灵携带一个精灵球才能进行同步.",
+    "item.cobblemon_utility_plus_modified.ball_synchronizer.msg.success": "成功将%1$s的精灵球变为了%2$s!",
+    "item.cobblemon_utility_plus_modified.ball_synchronizer.tooltip": "将捕捉到精灵的球同步为精灵当前携带的球，不消耗也不返还",
 
     "item.cobblemon_utility_plus_modified.transgender_orb": "变性珠",
     "item.cobblemon_utility_plus_modified.transgender_orb.tooltip": "改变宝可梦的性别",
-    "item.cobblemon_utility_plus_modified.transgender_orb.msg.can_not_change_gender": "该宝可梦为无性别或无法变性"
+    "item.cobblemon_utility_plus_modified.transgender_orb.msg.can_not_change_gender": "该宝可梦为无性别或无法变性",
+    "item.cobblemon_utility_plus_modified.transgender_orb.msg.success": "成功将%1$s变为了%2$s 性别!"
 
 
 }    

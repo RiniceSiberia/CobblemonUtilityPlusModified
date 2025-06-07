@@ -1,19 +1,23 @@
 package com.xxxt.cupm.items.caps
 
-import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.xxxt.cupm.CUPMTags
-import com.xxxt.cupm.items.getItemMsgPath
 import com.xxxt.cupm.utils.isIVZero
 import com.xxxt.cupm.utils.setIVZero
 import com.xxxt.cupm.utils.statTranslate
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer
+import net.minecraft.sounds.SoundEvents
 import net.minecraft.world.InteractionResultHolder
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Rarity
 
 class ObsidianCapItem: ShiftCapImpl(itemRarity = Rarity.COMMON,name = "obsidian_cap")   {
+
+    override fun canUseOnPokemon(pokemon: Pokemon): Boolean {
+        return super.canUseOnPokemon(pokemon)
+                && !pokemon.isLegendary()
+    }
 
     override val dittoLimit: Boolean = false
 
@@ -31,11 +35,12 @@ class ObsidianCapItem: ShiftCapImpl(itemRarity = Rarity.COMMON,name = "obsidian_
             if (!player.isCreative) {
                 stack.shrink(1)
             }
-            pokemon.entity?.playSound(CobblemonSounds.MEDICINE_CANDY_USE, 1F, 1F)
+            pokemon.entity?.playSound(SoundEvents.ENDERMAN_TELEPORT, 1F, 1F)
+            player.sendSystemMessage(getSuccessMsg(pokemon.getDisplayName(),statTranslate(mode).displayName))
             return InteractionResultHolder.success(stack)
         }else{
             val pokeName = pokemon.getDisplayName()
-            val mutableComponent = Component.translatable("${getItemMsgPath()}has_iv_max",pokeName,statTranslate(mode).displayName)
+            val mutableComponent = Component.translatable("${getItemMsgPath()}has_iv_min",pokeName,statTranslate(mode).displayName)
             player.sendSystemMessage(mutableComponent)
         }
         return InteractionResultHolder.fail(stack)

@@ -24,6 +24,7 @@ class CUPMMod(modEventBus: IEventBus, modContainer: ModContainer) {
         CUPMItems.register(modEventBus)
         CUPMTags.register(modEventBus)
         CUPMCreativeModTabs.register(modEventBus)
+        CUPMSounds.register(modEventBus)
 
 
         with(NeoForge.EVENT_BUS){

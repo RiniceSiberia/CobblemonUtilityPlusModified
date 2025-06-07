@@ -4,6 +4,7 @@ import com.cobblemon.mod.common.pokemon.Pokemon
 import com.xxxt.cupm.Config
 import com.xxxt.cupm.utils.allEVZero
 import com.xxxt.cupm.utils.clearEVs
+import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.MutableComponent
 import net.minecraft.server.level.ServerPlayer
@@ -57,21 +58,21 @@ class ShinyLotteryItem : CUPMSelectingItemImpl(itemRarity = Rarity.COMMON) {
                 pokemon.shiny = true
                 player.server.sendSystemMessage(
                     Component.translatable("${getItemMsgPath()}success",pokemon.nickname,player.customName)
+                        .withStyle(ChatFormatting.GOLD)
+                        .withStyle(ChatFormatting.BOLD)
                 )
                 pokemon.entity?.playSound(SoundEvents.BEACON_ACTIVATE, 1F, 1F)
                 return InteractionResultHolder.success(stack)
             }else{
-                player.server.sendSystemMessage(
+                player.sendSystemMessage(
                     Component.translatable("${getItemMsgPath()}fail",pokemon.nickname,player.customName)
                 )
+                return InteractionResultHolder.success(stack)
             }
-
-
+        }else{
+            player.sendSystemMessage(Component.translatable("${getItemMsgPath()}has_shiny"))
+            return InteractionResultHolder.fail(stack)
         }
-
-            val mutableComponent = Component.translatable("${getItemMsgPath()}has_shiny")
-            player.sendSystemMessage(mutableComponent)
-        return InteractionResultHolder.fail(stack)
     }
 
     override fun canUseOnPokemon(pokemon: Pokemon): Boolean {

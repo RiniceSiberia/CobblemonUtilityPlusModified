@@ -1,15 +1,13 @@
 package com.xxxt.cupm.items.caps
 
-import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
+import com.xxxt.cupm.CUPMSounds
 import com.xxxt.cupm.Config
-import com.xxxt.cupm.items.getItemMsgPath
 import com.xxxt.cupm.utils.allIVMax
 import com.xxxt.cupm.utils.setAllVMax
 import net.minecraft.ChatFormatting
 import net.minecraft.core.component.DataComponents
-import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.InteractionResultHolder
@@ -39,7 +37,8 @@ class GoldenCapItem() : CapImpl(
             if (!player.isCreative) {
                 stack.shrink(1)
             }
-            pokemon.entity?.playSound(CobblemonSounds.MEDICINE_CANDY_USE, 1F, 1F)
+            pokemon.entity?.playSound(CUPMSounds.INSERT_COIN_SOUND.get(), 1F, 1F)
+            player.sendSystemMessage(getSuccessMsg(pokemon.getDisplayName()))
             return InteractionResultHolder.success(stack)
         }else{
             val pokeName = pokemon.getDisplayName()

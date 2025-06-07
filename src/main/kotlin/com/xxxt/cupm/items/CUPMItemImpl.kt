@@ -23,11 +23,21 @@ abstract class CUPMItemImpl(
 
     abstract val name : String
 
+    fun getItemPath() : String = "${basicPath}${name}"
+
+    fun getItemMsgPath() : String = "${this.getItemPath()}.msg."
+
     open val hoverTextPath
         get() = "${getItemPath()}.tooltip"
 
     open val hoverText: MutableComponent
         get() = Component.translatable(hoverTextPath)
+
+
+    fun getSuccessMsg(vararg args : Any) : Component{
+        return Component.translatable("${getItemMsgPath()}success",*args)
+    }
+
 
     override fun appendHoverText(
         stack: ItemStack,
@@ -48,7 +58,3 @@ abstract class CUPMItemImpl(
         val basicPath = "item.cobblemon_utility_plus_modified."
     }
 }
-
-fun CUPMItemImpl.getItemPath() : String = "${basicPath}${name}"
-
-fun CUPMItemImpl.getItemMsgPath() : String = "${this.getItemPath()}.msg."

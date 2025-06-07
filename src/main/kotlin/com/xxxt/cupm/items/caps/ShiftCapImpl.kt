@@ -2,11 +2,8 @@ package com.xxxt.cupm.items.caps
 
 import com.cobblemon.mod.common.api.pokemon.stats.Stats
 import com.xxxt.cupm.CUPMTags
-import com.xxxt.cupm.items.getItemMsgPath
-import com.xxxt.cupm.items.getItemPath
 import com.xxxt.cupm.utils.statTranslate
 import net.minecraft.core.component.DataComponents
-import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.InteractionHand
 import net.minecraft.world.InteractionResultHolder
