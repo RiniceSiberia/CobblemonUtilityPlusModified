@@ -3,6 +3,7 @@ package com.xxxt.cupm.items.caps
 import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
+import com.xxxt.cupm.CUPMSounds
 import com.xxxt.cupm.CUPMTags
 import com.xxxt.cupm.Config
 import com.xxxt.cupm.utils.getVCount
@@ -33,8 +34,8 @@ class CopperCapItem() : ShiftCapImpl(itemRarity = Rarity.RARE, name = "copper_ca
             if (!player.isCreative) {
                 stack.shrink(1)
             }
-
-            pokemon.entity?.playSound(CobblemonSounds.MEDICINE_CANDY_USE, 1F, 1F)
+            pokemon.entity?.playSound(CUPMSounds.INSERT_COIN_SOUND.get(), 1F, 1F)
+            player.sendSystemMessage(getSuccessMsg(pokemon.getDisplayName(),statTranslate(mode).displayName,randomValue))
         }
         return InteractionResultHolder.success(stack)
     }

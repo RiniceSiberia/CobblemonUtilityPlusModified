@@ -5,19 +5,19 @@
   },
   "overrides": [
     {
-      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 1 },
+      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 0.1 },
       "model": "cobblemon_utility_plus_modified:item/copper_caps/atk" },
     {
-      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 2 },
+      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 0.2 },
       "model": "cobblemon_utility_plus_modified:item/copper_caps/def" },
     {
-      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 3 },
+      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 0.3 },
       "model": "cobblemon_utility_plus_modified:item/copper_caps/spa" },
     {
-      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 4 },
+      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 0.4 },
       "model": "cobblemon_utility_plus_modified:item/copper_caps/spd" },
     {
-      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 5 },
+      "predicate": { "cobblemon_utility_plus_modified:cap_state_tag": 0.5 },
       "model": "cobblemon_utility_plus_modified:item/copper_caps/spe" }
   ]
 }

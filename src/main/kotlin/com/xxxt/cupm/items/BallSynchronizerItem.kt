@@ -36,6 +36,7 @@ class BallSynchronizerItem() : CUPMSelectingItemImpl(itemRarity = Rarity.RARE) {
                     stack.shrink(1)
                 }
                 pokemon.entity?.playSound(CobblemonSounds.POKE_BALL_SEND_OUT, 1F, 1F)
+                player.sendSystemMessage(getSuccessMsg(pokemon.getDisplayName(), Component.translatable("pokeBall.name")))
                 return InteractionResultHolder.success(stack)
             }
         } else if (!(player.level()).isClientSide) {

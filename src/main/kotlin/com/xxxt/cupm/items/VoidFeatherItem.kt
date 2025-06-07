@@ -30,6 +30,7 @@ class VoidFeatherItem : CUPMSelectingItemImpl(itemRarity = Rarity.UNCOMMON) {
                 stack.shrink(1)
             }
             pokemon.entity?.playSound(SoundEvents.ENDERMAN_TELEPORT, 1F, 1F)
+            player.sendSystemMessage(Component.translatable("${getItemMsgPath()}success",pokemon.nickname))
             return InteractionResultHolder.success(stack)
         }
 

@@ -25,6 +25,7 @@ class ShinyCardItem : CUPMSelectingItemImpl(itemRarity = Rarity.EPIC) {
                 stack.shrink(1)
             }
             pokemon.entity?.playSound(SoundEvents.BEACON_ACTIVATE, 1F, 1F)
+            player.sendSystemMessage(getSuccessMsg(pokemon.getDisplayName()))
             return InteractionResultHolder.success(stack)
         }
 

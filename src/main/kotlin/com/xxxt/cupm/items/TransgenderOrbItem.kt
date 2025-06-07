@@ -29,6 +29,9 @@ class TransgenderOrbItem() : CUPMSelectingItemImpl(itemRarity = Rarity.RARE) {
                         stack.shrink(1)
                     }
                     pokemon.entity?.playSound(CobblemonSounds.POKE_BALL_SEND_OUT, 1F, 1F)
+                    player.sendSystemMessage(getSuccessMsg(pokeName,
+                        Component.translatable("cobblemon.gender." + pokemon.gender.name.lowercase())
+                    ))
                     return InteractionResultHolder.success(stack)
                 }
             } else if (pokeGender == Gender.MALE) {
@@ -38,6 +41,7 @@ class TransgenderOrbItem() : CUPMSelectingItemImpl(itemRarity = Rarity.RARE) {
                         stack.shrink(1)
                     }
                     pokemon.entity?.playSound(CobblemonSounds.POKE_BALL_SEND_OUT, 1F, 1F)
+                    Component.translatable("cobblemon.gender." + pokemon.gender.name.lowercase())
                     return InteractionResultHolder.success(stack)
                 }
             }

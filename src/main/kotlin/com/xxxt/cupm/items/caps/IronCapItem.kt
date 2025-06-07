@@ -1,11 +1,10 @@
 package com.xxxt.cupm.items.caps
 
-import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
+import com.xxxt.cupm.CUPMSounds
 import com.xxxt.cupm.CUPMTags
 import com.xxxt.cupm.Config
-import com.xxxt.cupm.items.getItemMsgPath
 import com.xxxt.cupm.utils.getVCount
 import com.xxxt.cupm.utils.isIVMax
 import com.xxxt.cupm.utils.statTranslate
@@ -35,7 +34,8 @@ class IronCapItem() : ShiftCapImpl(itemRarity = Rarity.UNCOMMON, name = "iron_ca
                 if (!player.isCreative) {
                     stack.shrink(1)
                 }
-                pokemon.entity?.playSound(CobblemonSounds.MEDICINE_CANDY_USE, 1F, 1F)
+                pokemon.entity?.playSound(CUPMSounds.INSERT_COIN_SOUND.get(), 1F, 1F)
+                player.sendSystemMessage(getSuccessMsg(pokemon.getDisplayName(),statTranslate(mode).displayName))
                 return InteractionResultHolder.success(stack)
             }
         } else if (!(player.level()).isClientSide) {
