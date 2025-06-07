@@ -1,13 +1,14 @@
 {
     "creative_tab.cobblemon_utility_plus_modified.utility_items": "方可梦实用道具",
 
-    "item.cobblemon_utility_plus_modified.msg.expire": "该物品已在%1$s时失效",
-    "item.cobblemon_utility_plus_modified.msg.binding_deviation": "该道具的绑定者为%1$s，你无法使用它",
-    "item.cobblemon_utility_plus_modified.tooltip.binding": "这个物品被%1$s锁定了，无法使用",
+    "item.cobblemon_utility_plus_modified.msg.expire": "该物品已在%1$s时失效！",
+    "item.cobblemon_utility_plus_modified.msg.binding_deviation": "该道具的绑定者为%1$s，你无法使用它！",
+    "item.cobblemon_utility_plus_modified.tooltip.binding": "这个物品已经与%1$s绑定了，其他人无法使用！",
 
-    "item.cobblemon_utility_plus_modified.tooltip.expire": "将在%1$s后到期，距离到期时间还有:%2$s",
+    "item.cobblemon_utility_plus_modified.tooltip.expire": "将在%1$s后失效，距离失效时间还有:%2$s",
+    "item.cobblemon_utility_plus_modified.tooltip.expired": "该物品已在%1$s时失效！",
 
-    "unit.time.week": "%1$s周",
+    "unit.time.week",: "%1$s周",
     "unit.time.day": "%1$s日",
     "unit.time.hour": "%1$s点",
     "unit.time.second": "%1$s秒",

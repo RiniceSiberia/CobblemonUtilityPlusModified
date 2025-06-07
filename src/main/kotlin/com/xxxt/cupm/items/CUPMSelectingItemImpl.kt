@@ -42,51 +42,59 @@ abstract class CUPMSelectingItemImpl(
         super.appendHoverText(stack, context, listComponent, tooltipFlag)
         stack.components.get(EXPIRE_TIME_STAMP_TAG.get())?.also {
             val diffInMillis = it.timeInMillis - Calendar.getInstance().timeInMillis
-            // 将毫秒差值转换为秒、分钟、小时、天数
-            val seconds = diffInMillis / 1000 % 60
-            val secondsText = if (seconds > 0){
-                Component.translatable("unit.time.month",seconds)
-            }else{
-                Component.empty()
-            }
-            val minutes = diffInMillis / (1000 * 60) % 60
-            val minutesText = if (minutes > 0) {
-                Component.translatable("unit.time.minute",minutes)
-            } else{
-                Component.empty()
-            }
-            val hours = diffInMillis / (1000 * 60 * 60) % 24
-            val hoursText = if (hours > 0) {
-                Component.translatable("unit.time.hour",hours)
-            } else{
-                Component.empty()
-            }
-            val days = diffInMillis / (1000 * 60 * 60 * 24) % 7
-
-            val daysText = if (days > 0) {
-                Component.translatable("unit.time.day",days)
-            } else{
-                Component.empty()
-            }
-            val weeks = diffInMillis / (1000 * 60 * 60 * 24 * 7)
-            val weeksText = if (weeks > 0) {
-                Component.translatable("unit.time.week",weeks)
-            } else{
-                Component.empty()
-            }
-
-            listComponent.add(
-                Component.translatable(
-                    "${basicPath}tooltip.expire",
-                    it.toString(),
-                    weeksText.append(daysText.append(hoursText.append(minutesText.append(secondsText))))
-                        .withStyle(ChatFormatting.ITALIC)
-                        .also { it ->
-                            if (diffInMillis/(1000 * 60 * 60 * 24) < 1){
-                            it.withStyle(ChatFormatting.RED)
+            if (diffInMillis > 0){
+                // 将毫秒差值转换为秒、分钟、小时、天数
+                val seconds = diffInMillis / 1000 % 60
+                val secondsText = if (seconds > 0){
+                    Component.translatable("unit.time.month",seconds)
+                }else{
+                    Component.empty()
+                }
+                val minutes = diffInMillis / (1000 * 60) % 60
+                val minutesText = if (minutes > 0) {
+                    Component.translatable("unit.time.minute",minutes)
+                } else{
+                    Component.empty()
+                }
+                val hours = diffInMillis / (1000 * 60 * 60) % 24
+                val hoursText = if (hours > 0) {
+                    Component.translatable("unit.time.hour",hours)
+                } else{
+                    Component.empty()
+                }
+                val days = diffInMillis / (1000 * 60 * 60 * 24) % 7
+                val daysText = if (days > 0) {
+                    Component.translatable("unit.time.day",days)
+                } else{
+                    Component.empty()
+                }
+                val weeks = diffInMillis / (1000 * 60 * 60 * 24 * 7)
+                val weeksText = if (weeks > 0) {
+                    Component.translatable("unit.time.week",weeks)
+                } else{
+                    Component.empty()
+                }
+                listComponent.add(
+                    Component.translatable(
+                        "${basicPath}tooltip.expire",
+                        it.toString(),
+                        weeksText.append(daysText.append(hoursText.append(minutesText.append(secondsText))))
+                            .withStyle(ChatFormatting.ITALIC)
+                            .also { it ->
+                                if (diffInMillis/(1000 * 60 * 60 * 24) < 1){
+                                it.withStyle(ChatFormatting.RED)
+                            }
                         }
-                    }
-                ))
+                    ))
+                }else{
+                listComponent.add(
+                    Component.translatable(
+                        "${basicPath}tooltip.expired",
+                        it.toString()
+                    ).withStyle(ChatFormatting.RED)
+                        .withStyle(ChatFormatting.ITALIC)
+                )
+            }
         }
 
         stack.components.get(BINDING_PLAYER_NAME_TAG.get())?.also {

@@ -1,11 +1,12 @@
 {
   "creative_tab.cobblemon_utility_plus_modified.utility_items": "Cobblemon Utility Items",
 
-  "item.cobblemon_utility_plus_modified.msg.expire": "This item expired at %1$s",
+  "item.cobblemon_utility_plus_modified.msg.expire": "This item has expired at %1$s",
   "item.cobblemon_utility_plus_modified.msg.binding_deviation": "This item is bound to %1$s. You cannot use it",
   "item.cobblemon_utility_plus_modified.tooltip.binding": "This item is locked by %1$s and cannot be used",
+    "item.cobblemon_utility_plus_modified.tooltip.expired": "该物品已在%1$s时失效！",
 
-  "item.cobblemon_utility_plus_modified.tooltip.expire": "Will expire after %1$s, remaining time: %2$s",
+  "item.cobblemon_utility_plus_modified.tooltip.expire": "This item has expired at %1$s",
 
   "unit.time.week": "%1$s week(s)",
   "unit.time.day": "%1$s day(s)",
