@@ -1,11 +1,10 @@
 package com.xxxt.cupm.items.caps
 
-import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
+import com.xxxt.cupm.CUPMConfig
 import com.xxxt.cupm.CUPMSounds
 import com.xxxt.cupm.CUPMTags
-import com.xxxt.cupm.Config
 import com.xxxt.cupm.utils.getVCount
 import com.xxxt.cupm.utils.statTranslate
 import net.minecraft.server.level.ServerPlayer
@@ -28,7 +27,7 @@ class CopperCapItem() : ShiftCapImpl(itemRarity = Rarity.RARE, name = "copper_ca
         if (!(player.level()).isClientSide) {
             val randomValue = Random.nextInt(0,31)
             pokemon.setIV(stat = statTranslate(mode), value = randomValue)
-            if (Config.convertPokeBallAfterUsing && getVCount(pokemon)>= Config.ironCopperCovertLimit){
+            if (CUPMConfig.convertPokeBallAfterUsing && getVCount(pokemon)>= CUPMConfig.ironCopperCovertLimit){
                 pokemon.caughtBall = PokeBalls.CHERISH_BALL
             }
             if (!player.isCreative) {

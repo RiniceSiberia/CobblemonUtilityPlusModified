@@ -30,7 +30,7 @@
     "item.cobblemon_utility_plus_modified.shiny_lottery.msg.legendary_multiply_nan_err": "服务端设置错误，神兽闪光概率为NaN!",
     "item.cobblemon_utility_plus_modified.shiny_lottery.msg.result_denominator_nan_err": "服务端设置错误，总抽奖数为NaN!",
     "item.cobblemon_utility_plus_modified.shiny_lottery.msg.success": "号外号外!\n玩家%1$s成功使用闪光彩票将ta的%2$s变为了闪光版本！",
-    "item.cobblemon_utility_plus_modified.shiny_lottery.msg.fail": "你没能抽中闪光...",
+    "item.cobblemon_utility_plus_modified.shiny_lottery.msg.fail": "这次没中奖，别灰心！试试剩下的吧~😊",
     "item.cobblemon_utility_plus_modified.shiny_lottery.msg.has_shiny": "这只宝可梦已经是闪光了，无法使用闪光彩票",
 
     "item.cobblemon_utility_plus_modified.shiny_card": "闪光卡",

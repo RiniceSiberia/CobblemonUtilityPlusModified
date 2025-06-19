@@ -2,13 +2,10 @@ package com.xxxt.cupm
 
 import com.mojang.logging.LogUtils
 import com.xxxt.cupm.events.CUPMCommands
-import net.minecraft.client.renderer.item.ItemProperties
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.bus.api.SubscribeEvent
 import net.neoforged.fml.ModContainer
 import net.neoforged.fml.common.Mod
-import net.neoforged.fml.config.ModConfig
-import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent
 import net.neoforged.neoforge.common.NeoForge
 import net.neoforged.neoforge.event.RegisterCommandsEvent
 
@@ -20,7 +17,7 @@ class CUPMMod(modEventBus: IEventBus, modContainer: ModContainer) {
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     init {
         NeoForge.EVENT_BUS.register(this)
-
+        CUPMConfig.register(modEventBus, modContainer)
         CUPMItems.register(modEventBus)
         CUPMTags.register(modEventBus)
         CUPMCreativeModTabs.register(modEventBus)
@@ -31,7 +28,6 @@ class CUPMMod(modEventBus: IEventBus, modContainer: ModContainer) {
             addListener(::registerCommands)
 //            addListener(CUPMCreativeModTabs::onBuildCreativeModeTabContentsEvent)
         }
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC)
 
     }
 

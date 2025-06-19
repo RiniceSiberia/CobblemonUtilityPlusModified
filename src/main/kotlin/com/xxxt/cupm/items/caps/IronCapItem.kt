@@ -2,9 +2,9 @@ package com.xxxt.cupm.items.caps
 
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
+import com.xxxt.cupm.CUPMConfig
 import com.xxxt.cupm.CUPMSounds
 import com.xxxt.cupm.CUPMTags
-import com.xxxt.cupm.Config
 import com.xxxt.cupm.utils.getVCount
 import com.xxxt.cupm.utils.isIVMax
 import com.xxxt.cupm.utils.statTranslate
@@ -28,7 +28,7 @@ class IronCapItem() : ShiftCapImpl(itemRarity = Rarity.UNCOMMON, name = "iron_ca
             if (!(player.level()).isClientSide) {
                 val stat= statTranslate(mode)
                 pokemon.setIV(stat,pokemon.ivs[stat]!!+1)
-                if (Config.convertPokeBallAfterUsing && getVCount(pokemon)>= Config.ironCopperCovertLimit){
+                if (CUPMConfig.convertPokeBallAfterUsing && getVCount(pokemon)>= CUPMConfig.ironCopperCovertLimit){
                     pokemon.caughtBall = PokeBalls.CHERISH_BALL
                 }
                 if (!player.isCreative) {

@@ -5,7 +5,6 @@ import com.cobblemon.mod.common.item.battle.BagItem
 import com.cobblemon.mod.common.pokemon.Pokemon
 import com.xxxt.cupm.CUPMTags.BINDING_PLAYER_NAME_TAG
 import com.xxxt.cupm.CUPMTags.EXPIRE_TIME_STAMP_TAG
-import com.xxxt.cupm.items.CUPMItemImpl
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer

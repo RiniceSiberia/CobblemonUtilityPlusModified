@@ -16,8 +16,6 @@ authors="${mod_authors}"
 
 description='''${mod_description}'''
 
-[[accessTransformers]]
-
 [[dependencies.${mod_id}]]
    modId="neoforge"
     mandatory=true

@@ -4,7 +4,7 @@ import com.cobblemon.mod.common.CobblemonSounds
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.item.PokeBallItem
 import com.cobblemon.mod.common.pokemon.Pokemon
-import com.xxxt.cupm.Config
+import com.xxxt.cupm.CUPMConfig
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.InteractionResultHolder
@@ -23,10 +23,10 @@ class BallSynchronizerItem() : CUPMSelectingItemImpl(itemRarity = Rarity.RARE) {
         val heldItem = pokemon.heldItem().item
         if (heldItem is PokeBallItem) {
             val pokeBall = heldItem.pokeBall
-            if (Config.convertPokeBallAfterUsing && pokeBall == PokeBalls.CHERISH_BALL){
+            if (CUPMConfig.convertPokeBallAfterUsing && pokeBall == PokeBalls.CHERISH_BALL){
                 val mutableComponent = Component.translatable("${getItemMsgPath()}to_cherish_prohibit")
                 player.sendSystemMessage(mutableComponent)
-            }else if(Config.convertPokeBallAfterUsing && pokemon.caughtBall == PokeBalls.CHERISH_BALL){
+            }else if(CUPMConfig.convertPokeBallAfterUsing && pokemon.caughtBall == PokeBalls.CHERISH_BALL){
                 val mutableComponent = Component.translatable("${getItemMsgPath()}from_cherish_prohibit")
                 player.sendSystemMessage(mutableComponent)
             }else{
@@ -49,7 +49,7 @@ class BallSynchronizerItem() : CUPMSelectingItemImpl(itemRarity = Rarity.RARE) {
     override fun canUseOnPokemon(pokemon: Pokemon): Boolean {
         val held = pokemon.heldItem().item
         if (held !is PokeBallItem) return false
-        return super.canUseOnPokemon(pokemon) && if (Config.convertPokeBallAfterUsing){
+        return super.canUseOnPokemon(pokemon) && if (CUPMConfig.convertPokeBallAfterUsing){
             pokemon.caughtBall != PokeBalls.CHERISH_BALL
                     && held.pokeBall != PokeBalls.CHERISH_BALL
         }else{

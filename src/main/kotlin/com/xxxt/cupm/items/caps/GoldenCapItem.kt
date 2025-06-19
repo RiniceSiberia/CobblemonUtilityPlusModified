@@ -2,8 +2,8 @@ package com.xxxt.cupm.items.caps
 
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
+import com.xxxt.cupm.CUPMConfig
 import com.xxxt.cupm.CUPMSounds
-import com.xxxt.cupm.Config
 import com.xxxt.cupm.utils.allIVMax
 import com.xxxt.cupm.utils.setAllVMax
 import net.minecraft.ChatFormatting
@@ -31,7 +31,7 @@ class GoldenCapItem() : CapImpl(
     ): InteractionResultHolder<ItemStack>? {
         if (!allIVMax(pokemon)){
             setAllVMax(pokemon)
-            if (Config.convertPokeBallAfterUsing){
+            if (CUPMConfig.convertPokeBallAfterUsing){
                 pokemon.caughtBall = PokeBalls.CHERISH_BALL
             }
             if (!player.isCreative) {

@@ -2,7 +2,7 @@ package com.xxxt.cupm.items.caps
 
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
-import com.xxxt.cupm.Config
+import com.xxxt.cupm.CUPMConfig
 import com.xxxt.cupm.utils.allIVZero
 import com.xxxt.cupm.utils.setAllIVZero
 import net.minecraft.network.chat.Component
@@ -23,7 +23,6 @@ class VoidCapItem() : CapImpl(itemRarity = Rarity.UNCOMMON) {
     override fun canUseOnPokemon(pokemon: Pokemon): Boolean {
         return super.canUseOnPokemon(pokemon)
                 && !allIVZero(pokemon)
-                && !pokemon.isLegendary()
     }
 
 
@@ -34,7 +33,7 @@ class VoidCapItem() : CapImpl(itemRarity = Rarity.UNCOMMON) {
     ): InteractionResultHolder<ItemStack>? {
         if (!allIVZero(pokemon)) {
             setAllIVZero(pokemon)
-            if (Config.convertPokeBallAfterUsing){
+            if (CUPMConfig.convertPokeBallAfterUsing){
                 pokemon.caughtBall = PokeBalls.CHERISH_BALL
             }
             if (!player.isCreative) {

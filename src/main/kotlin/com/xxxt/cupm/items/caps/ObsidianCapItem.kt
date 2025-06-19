@@ -14,11 +14,6 @@ import net.minecraft.world.item.Rarity
 
 class ObsidianCapItem: ShiftCapImpl(itemRarity = Rarity.COMMON,name = "obsidian_cap")   {
 
-    override fun canUseOnPokemon(pokemon: Pokemon): Boolean {
-        return super.canUseOnPokemon(pokemon)
-                && !pokemon.isLegendary()
-    }
-
     override val dittoLimit: Boolean = false
 
 
