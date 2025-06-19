@@ -3,13 +3,10 @@ package com.xxxt.cupm
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.world.item.CreativeModeTab
-import net.minecraft.world.item.CreativeModeTabs
 import net.neoforged.bus.api.IEventBus
-import net.neoforged.bus.api.SubscribeEvent
-import net.neoforged.fml.common.EventBusSubscriber
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
+
 //@EventBusSubscriber(modid = CUPMMod.MODID, bus = EventBusSubscriber.Bus.MOD)
 object CUPMCreativeModTabs {
     val CREATIVE_MODE_TAB =

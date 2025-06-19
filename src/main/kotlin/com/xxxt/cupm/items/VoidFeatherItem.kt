@@ -1,11 +1,6 @@
 package com.xxxt.cupm.items
 
-import com.cobblemon.mod.common.CobblemonSounds
-import com.cobblemon.mod.common.api.pokeball.PokeBalls
-import com.cobblemon.mod.common.item.PokeBallItem
-import com.cobblemon.mod.common.pokemon.EVs
 import com.cobblemon.mod.common.pokemon.Pokemon
-import com.xxxt.cupm.Config
 import com.xxxt.cupm.utils.allEVZero
 import com.xxxt.cupm.utils.clearEVs
 import net.minecraft.network.chat.Component

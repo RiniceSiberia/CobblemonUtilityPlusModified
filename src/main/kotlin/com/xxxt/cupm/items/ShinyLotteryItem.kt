@@ -1,9 +1,7 @@
 package com.xxxt.cupm.items
 
 import com.cobblemon.mod.common.pokemon.Pokemon
-import com.xxxt.cupm.Config
-import com.xxxt.cupm.utils.allEVZero
-import com.xxxt.cupm.utils.clearEVs
+import com.xxxt.cupm.CUPMConfig
 import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.MutableComponent
@@ -20,8 +18,8 @@ class ShinyLotteryItem : CUPMSelectingItemImpl(itemRarity = Rarity.COMMON) {
 
     override val hoverText: MutableComponent
         get() = Component.translatable(hoverTextPath,
-            String.format("%.1f",Config.shinyLotteryBasicDenominator),
-            String.format("%.1f",Config.shinyLotteryLegendaryMultiply*Config.shinyLotteryBasicDenominator))
+            String.format("%.1f",CUPMConfig.shinyLotteryBasicDenominator),
+            String.format("%.1f",CUPMConfig.shinyLotteryLegendaryMultiply*CUPMConfig.shinyLotteryBasicDenominator))
 
     override fun applyToPokemon(
         player: ServerPlayer,
@@ -29,14 +27,14 @@ class ShinyLotteryItem : CUPMSelectingItemImpl(itemRarity = Rarity.COMMON) {
         pokemon: Pokemon
     ): InteractionResultHolder<ItemStack>? {
         if (!pokemon.shiny){
-            var denominator = Config.shinyLotteryBasicDenominator
+            var denominator = CUPMConfig.shinyLotteryBasicDenominator
             if (denominator.isNaN()){
                 val mutableComponent = Component.translatable("${getItemMsgPath()}basic_denominator_nan_err")
                 player.sendSystemMessage(mutableComponent)
                 return InteractionResultHolder.fail(stack)
             }
             if (pokemon.isLegendary()){
-                val legendaryMultiply = Config.shinyLotteryLegendaryMultiply
+                val legendaryMultiply = CUPMConfig.shinyLotteryLegendaryMultiply
                 if (legendaryMultiply.isNaN()){
                     val mutableComponent = Component.translatable("${getItemMsgPath()}legendary_multiply_nan_err")
                     player.sendSystemMessage(mutableComponent)
@@ -65,7 +63,7 @@ class ShinyLotteryItem : CUPMSelectingItemImpl(itemRarity = Rarity.COMMON) {
                 return InteractionResultHolder.success(stack)
             }else{
                 player.sendSystemMessage(
-                    Component.translatable("${getItemMsgPath()}fail",pokemon.nickname,player.customName)
+                    Component.translatable("${getItemMsgPath()}fail")
                 )
                 return InteractionResultHolder.success(stack)
             }

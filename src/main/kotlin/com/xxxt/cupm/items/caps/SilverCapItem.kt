@@ -2,9 +2,9 @@ package com.xxxt.cupm.items.caps
 
 import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.pokemon.Pokemon
+import com.xxxt.cupm.CUPMConfig
 import com.xxxt.cupm.CUPMSounds
 import com.xxxt.cupm.CUPMTags
-import com.xxxt.cupm.Config
 import com.xxxt.cupm.utils.isIVMax
 import com.xxxt.cupm.utils.setVMax
 import com.xxxt.cupm.utils.statTranslate
@@ -26,7 +26,7 @@ class SilverCapItem(): ShiftCapImpl(itemRarity = Rarity.EPIC, name = "silver_cap
             0)%6
         if (!isIVMax(pokemon,mode)) {
             setVMax(pokemon,mode)
-            if (Config.convertPokeBallAfterUsing){
+            if (CUPMConfig.convertPokeBallAfterUsing){
                 pokemon.caughtBall = PokeBalls.CHERISH_BALL
             }
             if (!player.isCreative) {

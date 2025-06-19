@@ -1,19 +1,27 @@
 package com.xxxt.cupm.items.caps
 
-import com.cobblemon.mod.common.api.pokeball.PokeBalls
 import com.cobblemon.mod.common.api.pokemon.egg.EggGroup
 import com.cobblemon.mod.common.api.pokemon.stats.Stats
 import com.cobblemon.mod.common.pokemon.Pokemon
-import com.xxxt.cupm.Config
 import com.xxxt.cupm.utils.getVCount
 import com.xxxt.cupm.utils.weightedShuffle
+import net.minecraft.ChatFormatting
+import net.minecraft.core.component.DataComponents
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.sounds.SoundEvents
 import net.minecraft.world.InteractionResultHolder
 import net.minecraft.world.item.ItemStack
+import net.minecraft.world.item.Rarity
 
-class IceCapItem : CapImpl(){
+class IceCapItem : CapImpl(
+    properties = Properties().apply {
+        rarity(Rarity.COMMON)
+        this.component(DataComponents.CUSTOM_NAME,
+                    Component.translatable("${basicPath}ice_cap")
+                        .withStyle(ChatFormatting.BLUE))
+    }
+){
     override val name: String
         get() = "ice_cap"
 

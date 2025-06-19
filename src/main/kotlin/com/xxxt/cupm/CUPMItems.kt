@@ -1,17 +1,13 @@
 package com.xxxt.cupm
 
-import com.xxxt.cupm.items.DevolutionRelicItem
-import com.xxxt.cupm.items.BallSynchronizerItem
-import com.xxxt.cupm.items.ShinyCardItem
-import com.xxxt.cupm.items.ShinyLotteryItem
-import com.xxxt.cupm.items.TransgenderOrbItem
-import com.xxxt.cupm.items.VoidFeatherItem
+import com.xxxt.cupm.items.*
 import com.xxxt.cupm.items.caps.*
 import net.minecraft.world.item.Item
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import java.util.function.Supplier
+
 //@EventBusSubscriber(modid = CUPMMod.MODID, bus = EventBusSubscriber.Bus.MOD)
 object CUPMItems {
 

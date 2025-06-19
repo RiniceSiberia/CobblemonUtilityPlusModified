@@ -1,8 +1,6 @@
 package com.xxxt.cupm.items
 
 import com.cobblemon.mod.common.pokemon.Pokemon
-import com.xxxt.cupm.utils.allEVZero
-import com.xxxt.cupm.utils.clearEVs
 import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.sounds.SoundEvents

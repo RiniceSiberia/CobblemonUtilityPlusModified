@@ -1,14 +1,12 @@
 package com.xxxt.cupm.items
 
 import com.cobblemon.mod.common.item.CobblemonItem
-import com.mojang.logging.LogUtils
-import com.xxxt.cupm.items.CUPMItemImpl.Companion.basicPath
+import net.minecraft.ChatFormatting
 import net.minecraft.network.chat.Component
 import net.minecraft.network.chat.MutableComponent
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Rarity
 import net.minecraft.world.item.TooltipFlag
-import org.slf4j.Logger
 
 abstract class CUPMItemImpl(
     properties : Properties = Properties()
@@ -51,7 +49,7 @@ abstract class CUPMItemImpl(
 //        logger.info("hover_text_path:${hoverTextPath}")
 //        logger.info("tooltips:${hoverText}")
 //        logger.info("msgPath:${getItemMsgPath()}")
-        listComponent.add(hoverText)
+        listComponent.add(hoverText.withStyle(ChatFormatting.GRAY))
         super.appendHoverText(stack, context, listComponent, tooltipFlag)
     }
     companion object{
